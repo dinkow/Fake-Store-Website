@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />	
+	<title>Ian Maigler</title>
+
+	<style>
+		table, th, td {
+			border:1px solid black;
+		}
+	</style>
+
+</head>
+<body>
+<h1>Lab09 JSON and AJAX</h1>
+
+<form>
+	<label for="Superheroes">Superheroes:</label>
+	<select name="Superheroes" id="Superheroes" onchange="loadDoc()">
+		<option value="all">Show All Superheroes</option>
+		<option value="Marvel Comics">Show Marvel Superheroes</option>
+		<option value="DC Comics">Show DC Superheroes</option>
+	</select>
+	<br><br>
+</form>
+
+<table id="demo"></table>
+
+<script>
+// load table function
+function loadDoc() {
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			var myObj = JSON.parse(this.responseText);
+			// PARSE JSON data (in myObj) and insert into variable "result"
+			
+			var selectedFranchise = document.getElementById("Superheroes");
+			var franchise = selectedFranchise.value;
+			
+			var result = "<tr><th>Superhero</th><th>Publisher</th><th>Alter Ego</th><th>First Appearance</th><th>Characters</th></tr>";
+			result += getSuperheroes(myObj, franchise);
+			// display the result in HTML
+			document.getElementById("demo").innerHTML = result;
+		}
+	};
+	xhttp.open("GET", "https://deepblue.camosun.bc.ca/~c0180354/ics128/lab09/lab09_superheroes.json");
+	xhttp.send();
+}
+
+// function to check if an object has the desired publisher
+function getSuperheroes(JSON_list, franchise) {
+	var superheros = "";
+	
+	if(franchise == "all"){// display all superheros
+		for (var i = 0; i < JSON_list.length; i++) {
+			superheros += ("<tr><td>" + JSON_list[i].superhero + "</td><td>" + JSON_list[i].publisher + "</td><td>" + JSON_list[i].alter_ego + "</td><td>" + JSON_list[i].first_appearance + "</td><td>" + JSON_list[i].characters + "</td></tr>");
+		}
+	} else {// display specific superheroes
+		for (var i = 0; i < JSON_list.length; i++) {
+			if(JSON_list[i].publisher == franchise){
+				superheros += ("<tr><td>" + JSON_list[i].superhero + "</td><td>" + JSON_list[i].publisher + "</td><td>" + JSON_list[i].alter_ego + "</td><td>" + JSON_list[i].first_appearance + "</td><td>" + JSON_list[i].characters + "</td></tr>");
+			}
+		}
+	}
+	return superheros;
+}
+</script>
+</body>
+</html>

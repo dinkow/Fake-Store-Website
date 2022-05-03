@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<meta name="description" content="Proffesional Web Design">
+		<meta name="keywords" content="web design, professional">
+		<meta name="author" content="Ian Maigler">
+		<title>Web Design | Get Quote</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<header class="bg-dark-grey">
+			<div class="container">
+				<div id="branding">
+					<h1><span class="highlight">Yakoun River </span>Web Development</h1>
+				</div>
+					<nav>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="services.html">Services</a></li>
+							<li class="current"><a href="quote.html">Get Quote</a></li>
+						</ul>
+					</nav>	
+			</div>
+		</header>
+		<section id="newsletter" class="bg-dark-grey">
+			<div class="container">
+				<h3>Subscribe to Newsletter</h3>
+				<form>
+					<input type="email" placeholder="Enter email...">
+					<button type="submit" class="button-1">Subscribe</button>
+				</form>
+			</div>
+		</section>
+		<section id="content">
+			<div class="container">
+				<main>
+					<h2 class="page-title">Get Quote</h2>
+					<form class="getquote" id="get-quote">
+			<!-- First Name !-->
+		<div class="get name">
+			<label for="fname">First Name:</label>
+			<input placeholder="First name..." type="text" id="fname" name="fname" required>
+			<!-- Last Name !-->
+			<label for="lname">Last Name:</label>
+			<input placeholder="Last name..." type="text" id="lname" name="lname" required><br>
+		</div>
+		<div class="get email">	
+			<!-- email !-->
+			<label for="email">Email address:</label>
+			<input placeholder="Enter email..." type="email" id="email" name="email" size="40" required><br>
+		</div>
+		<div class="location">	
+			<!-- location !-->
+			<label for="location">Location:</label>
+			<select name="location" id="location">
+				<option value="Victoria">Victoria</option>
+				<option value="Vancouver">Vancouver</option>
+				<option value="Nanaimo">Nanaimo</option>
+				<option value="Prince George">Prince George</option>
+				<option value="Kelowna">Kelowna</option>
+				<option value="Worcestershire">Wosheshiyzsheyer?</option>
+			</select><br>
+		</div>
+		<div class="check box">
+			<!-- check box !-->
+			Services Required:<br>
+			<input type="checkbox" id="box1" name="box1" value="HTML">
+			<label class="data-value" for "box1">HTML </label>
+			<input type="checkbox" id="box2" name="box2" value="CSS">
+			<label class="data-value" for "box2">CSS </label>
+			<input type="checkbox" id="box3" name="box3" value="JavaScript">
+			<label class="data-value" for "box3">JavaScript </label>
+			<input type="checkbox" id="box4" name="box4" value="JQuery">
+			<label class="data-value" for "box4">JQuery </label>
+			<input type="checkbox" id="box5" name="box5" value="MySQL">
+			<label class="data-value" for "box5">MySQL </label>
+			<input type="checkbox" id="box6" name="box6" value="PHP">
+			<label class="data-value" for "box6">PHP </label>
+			<input type="checkbox" id="box7" name="box7" value="Full-stack">
+			<label class="data-value" for "box7">Full-stack </label><br>
+		</div>
+		<div class="time">
+			<!-- Time !-->
+			<label for "time">Estimated Hours (max of 1000):</label>
+			<input type="number" id="time" name="time" min="1" max="1000"><br>
+		</div>	
+		<div class="ext info">
+			<!-- extra info !-->
+			<label for="addInfo">Additional Information:</label><br>
+			<textarea placeholder="Input here..." id="addInfo" rows="5" cols="60"></textarea><br>
+		</div>
+		<!-- Payment Method !-->
+		<div class="payment">
+			Payment Type:<br>
+			<input type="radio" id="cash" name="payment" value="Cash">
+			<label class="data-value" for="cash">Cash (5% discount)</label><br>
+			<input type="radio" id="Credit" name="payment" value="Credit">
+			<label class="data-value" for="Credit">Credit</label>
+		</div>
+		<!-- Get Quote Button !-->
+		<div class="get quote">
+			<button class="button-1">Get Quote</button>
+		</div>
+		</form>
+				</main>
+			</div>
+		</section>
+		<footer>
+			<div class="container">
+				<p>Coptright &copy; 2021 - Ian Maigler </p>
+			</div>
+		</footer>
+	</body>
+</html>

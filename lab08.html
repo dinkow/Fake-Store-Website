@@ -1,0 +1,82 @@
+﻿
+<!doctype html>
+<html>
+  <head>
+    <title>Lab 08 Part 2</title>
+    <meta charset="utf-8">
+
+    <style>
+      #boxes { margin-top: 50px; float: left; width: 100%; }
+      #toggles { float: left; width: 100%; margin-top: 10px; }
+      #info { float: left; margin-top: 5px; }
+      .box { width: 50px; height: 50px; float: left; }
+      .outlined { border: 2px solid black; }
+      .round-edge { border-radius: 15px; }
+      .teal { background-color: teal; }
+    </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+
+    <script>
+
+    var colorTeal = "rgb(57, 204, 204)";
+
+    $(document).ready(function() {
+
+			/* Step 1: adding a class */
+			$('#boxes').children().addClass('outlined');
+
+			/* Step 2: jQuery modifying CSS attributes */
+			$('#button_toggle_colors').click(function() {
+				$('#boxes').children().toggleClass('teal');
+			});
+
+			/* Step 3: jQuery adding/removing/modifying classes*/
+			$('#button_toggle_roundedges').click(function() {
+				$('#boxes').children().toggleClass('round-edge');
+			});
+					
+			/* Step 4: Adding new elements */
+			$('#button_add_box').click(function() {
+				var parentBox = document.getElementById("boxes");
+				var newBoxNum = parentBox.children.length + 1;
+				
+				$('#boxes').append(`<div id="box${newBoxNum}" class="box"></div>`);
+				$('#boxes').children().last().addClass('outlined');
+			});
+    });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+
+      <div id="boxes">
+        <!-- Step 1: Add the 'outlined' class to each of the boxes, but not here as HTML code -->
+        <div id="box1" class="box"></div>
+        <div id="box2" class="box"></div>
+        <div id="box3" class="box"></div>
+      </div>
+
+      <div id="toggles">
+        <h2>Toggles</h2>
+        <button class="btn" id="button_toggle_colors"
+          >Toggle Colors</button>
+        <button class="btn" id="button_toggle_roundedges"
+          >Toggle Rounded Borders</button>
+        <button class="btn" id="button_add_box"
+          >Add a New Box</button>
+      </div>
+
+      <div id="info">
+        <h2>Descriptions:</h2>
+        <ul>
+          <li><b>Toggle Colors</b>: Toggles the color on and off for each
+            box using CSS classes.</li>
+          <li><b>Toggle Rounded Borders</b>: Toggles the color on and off
+            for each box using CSS attributes.</li>
+          <li><b>Add a New Box</b>: Adds one new box to the container.</li>
+        </ul>
+      </div>
+
+    </div>
+  </body>
+</html>

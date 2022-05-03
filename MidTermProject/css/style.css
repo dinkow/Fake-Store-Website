@@ -1,0 +1,300 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+/**************************/
+/******Navigation Bar******/
+/**************************/
+.nav {
+	position: fixed;
+	top: 0;
+	right: 0;
+	border-bottom: 3px solid #7C3727;
+  text-align: right;
+  height: 70px;
+	width: 100vw;
+  line-height: 70px;
+	background-color: #A94432;
+	font-family: 'Teko', sans-serif;
+	font-size: 25px;
+	z-index: 2;
+}
+.rustlogo img {
+	position: fixed;
+	top: -5px;
+	left: 20px;
+	width: 150px;
+	z-index: 3;
+}
+.menu {
+  margin: 0 30px 0 0;
+}
+.menu a {
+  clear: right;
+  text-decoration: none;
+  color: #A6A7A9;
+  margin: 0 10px;
+  line-height: 70px;
+}
+.menu a:hover {
+	color: #959698;
+}
+span {
+  color: #595959;
+}
+span:hover {
+  color: #4c4c4c;
+}
+label {
+  margin: 0 40px 0 0;
+  font-size: 26px;
+  line-height: 70px;
+  display: none;
+  width: 26px;
+  float: right;
+}
+#toggle {
+  display: none;
+}
+/****************************/
+/*Background Video and Title*/
+/****************************/
+.topSection {
+	height: 100vh;
+	width: 100%;
+	text-align: center;
+}
+.fixedVideo {
+	position: fixed; 
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+}
+.title {
+	position: relative;
+	top: 45%;
+	font-family: 'Teko', sans-serif;
+	text-transform: uppercase;
+	font-size: 80px;
+	color: #A6A7A9;
+	z-index: -1;
+	text-shadow: -3px 0 #33140f, 0 3px #33140f, 3px 0 #33140f, 0 -3px #33140f; 
+}
+.title h1 {
+	margin: 0;
+	padding: 0;
+}
+/******************************/
+/*3 items and facts about them*/
+/******************************/
+.middleSection {
+	height: 620px;
+	width: 100%;
+	background-color: #4c4c4c;
+	text-align: center;
+	font-family: 'Teko', sans-serif;
+}
+.facts img {
+	width: 200px;
+}
+.middleSection h1 {
+	font-size: 2em;
+}
+.middleSection p {
+	font-size: 25px;
+}
+.factsContainer {
+	width: 100%;
+	height: 100%;
+	padding-top: 30px;
+}
+.facts {
+	float: left;
+	width: 500px;
+	height: 400px;
+	padding: 40px 30px 50px 30px;
+	margin: 30px;
+	background-color: #595959;
+}
+#factsLeft {
+	margin-left: 50px;
+}
+/***************/
+/***Rust Lore***/
+/***************/
+.bottomSection {
+	height: 851px;
+	width: 100%;
+	background-color: yellow;
+}
+.bottomSection img {
+	height: 100%;
+	width: 100%;
+}
+.info { /*lore heading and paragraph*/
+	position: relative;
+	top: -75%;
+	width: 70%;
+	padding: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	font-family: 'Teko', sans-serif;
+	font-size: 25px;
+	color: #C9CACB;
+	background-color: rgba(0, 0, 0, 0.85);
+}
+/****************/
+/***email form***/
+/****************/
+.signUp { /*class name of section containing form and blurred video*/
+	height: 100vh;
+	width: 100%;
+	overflow: hidden;
+}
+.signUp video {
+	position: relative;
+	top: 0%;
+	left: 30%;
+	width: 40%;
+	filter: blur(8px);
+}
+.formSignUp { /*class name of div containing text and inputs for form*/
+	position: relative;
+	top: 30%;
+	text-align: center;
+	font-family: 'Teko', sans-serif;
+	z-index: 1;
+}
+input[type=text] {
+	background-color: #7C3727;
+  color: white;
+	font-family: 'Teko', sans-serif;
+	font-size: 15px;
+}
+input[type=email] {
+	background-color: #7C3727;
+  color: white;
+	font-family: 'Teko', sans-serif;
+	font-size: 15px;
+}
+.formSignUp h1 {
+	transform: translateY(45px);
+	color: #A6A7A9;
+	text-shadow: 2px 2px #7C3727;
+	font-size: 55px;
+}
+.formSignUp h3 {
+	transform: translateY(-10px);
+	color: #7C3727;
+	text-shadow: 2px 2px black;
+	font-size: 35px;
+}
+.getName { /*div name of input for name*/
+	transform: translateY(-14px) scale(1.75,1.75);
+}
+.getEmail { /*div name of input for email*/
+	transform: translateY(14px) scale(1.75,1.75);
+}
+.button1 { /*sign up button*/
+	font-family: 'Teko', sans-serif;
+	transform: translateY(45px) scale(2, 2);
+	color: #7f7f7f;
+	background-color: #7C3727;
+}
+/*****************/
+/***Ipad sizing***/
+/*****************/
+@media only screen and (max-width: 810px) {
+    label {
+        display: block;
+        cursor: pointer;
+    }
+    .menu {
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+    .menu a {
+        display: block;
+        border-bottom: 1px solid #7C3727;
+        margin: 0;
+				background-color: rgba(169, 68, 50, 0.85);
+    }
+    #toggle:checked + .menu {
+        display: block;
+    }
+		.fixedVideo { /*centering video on mobile screens*/
+			transform: translateX(-500px);
+			width: 200%;
+			overflow: hidden;
+		}
+		.title {
+			font-size: 80px;
+		}
+		.factsContainer {
+			padding-top: 0px;
+		}
+		.facts img {
+			width: 100px;
+		}
+		.facts {
+			width: 100%;
+			height: auto;
+			padding: 3px 0px 0px 0px;
+			margin: 0px 0px 0px 0px;
+		}
+		#factsLeft {
+			padding-top: 25px;
+			margin-left: 0px;
+		}
+		.info {
+			top: -82%;
+		}
+		.bottomSection img {
+			height: 90%;
+			width: 100%;
+		}
+		.signUp {
+			position: relative;
+			top: 20%;
+			height: 100vh;
+			width: 100%;
+		}
+		.signUp video {
+			top: 0%;
+			left: 0%;
+			width: 100%;
+		}
+}
+/******************************/
+/***Iphone 6/7/8 plus sizing***/
+/******************************/
+@media only screen and (max-width: 500px) {
+		.fixedVideo { /*centering video on mobile screens*/
+			transform: translateX(-760px);
+			width: 400%;
+		}
+		.title {
+			font-size: 40px;
+		}
+		.info {
+			top: -110%;
+		}
+		.bottomSection img {
+			height: 115%;
+			width: 100%;
+		}
+		.signUp { 
+			position: relative;
+			top: 70%;
+			height: 120vh;
+			width: 100%;
+		}
+		.signUp video {
+			top: -2%;
+			left: 0%;
+			width: 170%;
+		}
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Rust Fan Page</title>
+<meta charset="UTF-8">
+<meta name="keywords" content="rust, rust game, rust steam">
+<meta name="description" content="Rust fan page">
+<meta name="author" content="Ian Maigler">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<!--******************
+	****Navigation Bar****
+	******************!-->
+	<div class="rustlogo">
+			<img src="video_images/rust_logo.png" alt="rust logo">
+	</div>
+	<div class="nav">
+		 <label for="toggle">&#9776;</label>
+		 <input type="checkbox" id="toggle"/>
+				<div class="menu">
+					 <a href="#top">Home</a>
+					 <a href="#middle">3 Items</a>
+					 <a href="#bottom">Lore</a>
+					<a href="#sign"><span>Email List</span></a>
+				</div>
+	</div>
+	<!--**************************
+	**background video and title**
+	**************************!-->
+	<section class="topSection" id="top">
+		<div class="fixedVideo">
+			<video autoplay muted loop>
+				<source src="video_images/Rust_Official_Trailer.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
+		</div>
+		<div class="title">
+			<h1>Rust Fan Page</h1>
+		</div>	
+	</section>
+	<!--*******************
+	***3 items and facts***
+	*******************!-->
+	<section class="middleSection" id="middle">
+		<div class="factsContainer">
+			<div class="facts" id="factsLeft">
+				<img src="video_images/MP5_icon.png" alt="MP5">
+				<h1>MP5</h1>
+				<p>The MP5A4 is a submachine gun which shoots Pistol Bullets and holds 30 rounds of ammunition.
+				It is the only military grade weapon in Rust that can be crafted.</p>
+			</div>
+			<div class="facts">
+			<img src="video_images/Satchel_Charge_icon.png" alt="Satchel charge">
+				<h1>Satchel Charge</h1>
+				<p>The Satchel Charge is an unreliable raiding tool that can be used to destroy player-made 
+				buildings for the purpose of entering other players bases and looting them.</p>
+			</div>
+			<div class="facts">
+				<img src="video_images/Pumpkin_icon.png" alt="pumpkin">
+				<h1>Pumpkin</h1>
+				<p>The Pumpkin is a food item that can be found growing at riversides and planted around 
+				the world by players. When eaten, a pumpkin restores 10 health, 100 hunger, and 15 thirst.</p>
+			</div>
+		</div>
+	</section>
+	<!--*************
+	****Rust Lore****
+	*************!-->
+	<section class="bottomSection" id="bottom">
+		<img src="video_images/Rust_Landscape.png" alt="Rust Landscape">
+		<div class="info">
+			<h1>Rust Lore</h1>
+			<p>Here is where it all begins. Naked and afraid. Rust is brutal and unforgiving, no tutorial,
+			no directions, just a world to explore and survive in. You will have to find food, water, and shelter. 
+			When you spawn in Rust for the first time, you find yourself on a beach with nothing but a rock and a torch.</p>
+			<p>The objective of Rust is to survive in the wilderness using gathered or stolen materials. 
+			Players must successfully manage their hunger, thirst, and health, or risk dying. 
+			Despite the presence of hostile animals such as bears and wolves, the primary threat to the player 
+			is other players due to the game being solely multiplayer. Trust no one.</p>
+		</div>
+	</section>
+	<!--*****************
+	****emailing list****
+	*****************!-->
+	<section class="signUp" id="sign">
+		<div class="formSignUp">
+			<h1>Love Rust?</h1>
+			<h3>Sign up for our email list!</h3>
+			<form>
+				<div class="getName">
+					<input placeholder="FULL NAME" type="text" id="fullname" name="fullname" required>
+				</div>
+				<div class="getEmail">
+					<input placeholder="EMAIL" type="email" id="email" name="email" required>
+				</div>
+				<div class="submitEmail">
+					<button class="button1">Sign up</button>
+				</div>
+			</form>
+		</div>
+		<video autoplay muted loop>
+			<source src="video_images/Rust_Official_Trailer.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+		</video>
+	</section>
+</body>
+</html>
